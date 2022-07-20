@@ -11,7 +11,7 @@ import net.thucydides.core.annotations.Steps;
 import org.openqa.selenium.By;
 
 @Getter
-@DefaultUrl("/")
+@DefaultUrl("https://www.saucedemo.com/")
 public class BasePage extends PageObject {
 
     @FindBy(how = How.ID, using = "user-name")
