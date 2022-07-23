@@ -1,6 +1,7 @@
 package net.serenitybdd.starter.fetests.testCases;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import net.serenitybdd.starter.model.User;
 import net.thucydides.core.annotations.Managed;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -13,11 +14,6 @@ public class BaseTest {
     @Managed
     WebDriver driver;
 
-    //UTILS
-    public String compileLocator(String locator, String replacement) {
-        return locator.replace("REPLACE", replacement);
-    }
-
     public void startApp() {
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
@@ -28,16 +24,21 @@ public class BaseTest {
         driver.quit();
     }
 
-    public void logIn() {
-        driver.findElement(By.id("user-name")).sendKeys("standard_user");
-        driver.findElement(By.id("password")).sendKeys("secret_sauce");
+    public void logIn(User user) {
+        if(!driver.getCurrentUrl().equals("https://www.saucedemo.com")) driver.get("https://www.saucedemo.com");
+        driver.findElement(By.id("user-name")).sendKeys(user.getUserName());
+        driver.findElement(By.id("password")).sendKeys(user.getPassword());
         driver.findElement(By.id("login-button")).click();
-        checkLoggingInSuccessfull();
+        checkSuccessfulLogin();
     }
 
-    public void checkLoggingInSuccessfull() {
+    public void checkSuccessfulLogin() {
         assertThat(driver.getCurrentUrl().contains("/inventory.html"))
                 .as("inventory page hasn't been opened")
                 .isTrue();
+    }
+
+    public String compileLocator(String locator, String replacement) {
+        return locator.replace("REPLACE", replacement);
     }
 }

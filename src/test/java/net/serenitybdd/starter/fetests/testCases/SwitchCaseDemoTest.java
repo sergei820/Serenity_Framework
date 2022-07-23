@@ -1,20 +1,16 @@
 package net.serenitybdd.starter.fetests.testCases;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
-import net.serenitybdd.core.pages.PageObject;
 import net.serenitybdd.junit.runners.SerenityRunner;
-import net.thucydides.core.annotations.Managed;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
 
+import static net.serenitybdd.starter.model.User.createValidUser;
 import static org.assertj.core.api.Assertions.assertThat;
 
 @RunWith(SerenityRunner.class)
-public class SwitchCaseDemo extends BaseTest {
+public class SwitchCaseDemoTest extends BaseTest {
 
     public static final String SAUCE_LABS_BACKPACK = "Sauce Labs Backpack";
     public static final String SAUCE_LABS_BIKE_LIGHT = "Sauce Labs Bike Light";
@@ -29,7 +25,7 @@ public class SwitchCaseDemo extends BaseTest {
     @Test
     public void checkPrices() {
         startApp();
-        logIn();
+        logIn(createValidUser());
         checkItemPrice(SAUCE_LABS_BACKPACK);
         stopApp();
     }
@@ -37,7 +33,7 @@ public class SwitchCaseDemo extends BaseTest {
     @Test
     public void checkMaterials() {
         startApp();
-        logIn();
+        logIn(createValidUser());
         checkDescriptionOnUI(SAUCE_LABS_BOLT_T_SHIRT);
         stopApp();
     }
