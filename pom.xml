@@ -168,13 +168,6 @@
             <artifactId>commons-dbutils</artifactId>
             <version>${commons-dbutils.version}</version>
         </dependency>
-        <!--<dependency>
-            <groupId>org.assertj</groupId>
-            <artifactId>assertj-core</artifactId>
-            <version>${assertj.version}</version>
-            <scope>test</scope>
-        </dependency>
-         https://mvnrepository.com/artifact/org.assertj/assertj-core -->
         <dependency>
             <groupId>org.assertj</groupId>
             <artifactId>assertj-core</artifactId>
@@ -187,7 +180,7 @@
         <dependency>
             <groupId>io.github.bonigarcia</groupId>
             <artifactId>webdrivermanager</artifactId>
-            <version>5.0.3</version>
+            <version>5.2.0</version>
         </dependency>
 
         <dependency>
