@@ -1,28 +1,47 @@
 package net.serenitybdd.starter.fetests.testCases;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import net.serenitybdd.core.Serenity;
+import net.serenitybdd.junit.runners.SerenityRunner;
+import net.serenitybdd.starter.fetests.testSteps.BasePageSteps;
 import net.serenitybdd.starter.model.User;
 import net.thucydides.core.annotations.Managed;
+import net.thucydides.core.annotations.Steps;
+import org.junit.runner.RunWith;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
+@RunWith(SerenityRunner.class)
 public class BaseTest {
 
     @Managed
-    WebDriver driver;
+    public WebDriver driver;
 
+    @Steps
+    public BasePageSteps basePageSteps;
+
+    @BeforeTest
     public void startApp() {
-        WebDriverManager.chromedriver().setup();
-        driver = new ChromeDriver();
+        //WebDriverManager.chromedriver().setup();
+        //driver = new ChromeDriver();
+
+        //driver = Serenity.getDriver();
         driver.get("https://www.saucedemo.com");
+        basePageSteps = new BasePageSteps();
     }
 
+    @AfterTest
     public void stopApp() {
         driver.quit();
     }
+
+
+
 
     public void logIn(User user) {
         if(!driver.getCurrentUrl().equals("https://www.saucedemo.com")) driver.get("https://www.saucedemo.com");
@@ -36,9 +55,5 @@ public class BaseTest {
         assertThat(driver.getCurrentUrl().contains("/inventory.html"))
                 .as("inventory page hasn't been opened")
                 .isTrue();
-    }
-
-    public String compileLocator(String locator, String replacement) {
-        return locator.replace("REPLACE", replacement);
     }
 }

@@ -76,11 +76,11 @@
             <artifactId>json-schema-validator</artifactId>
             <version>4.4.0</version>
         </dependency>
-        <dependency>
+        <!--<dependency>
             <groupId>org.hamcrest</groupId>
             <artifactId>hamcrest-all</artifactId>
             <version>1.3</version>
-        </dependency>
+        </dependency>-->
 
         <!-- Logger -->
         <dependency>
@@ -128,6 +128,13 @@
             <scope>compile</scope>
         </dependency>
 
+
+        <dependency>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+            <version>7.6.1</version>
+            <scope>test</scope>
+        </dependency>
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
@@ -145,7 +152,7 @@
             <artifactId>mysql-connector-java</artifactId>
             <version>8.0.25</version>
         </dependency>
-        <!-- json -->
+        <!-- json-->
         <dependency>
             <groupId>org.json</groupId>
             <artifactId>json</artifactId>
@@ -189,6 +196,7 @@
             <version>2.3.3</version>
         </dependency>
 
+        <!---->
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-databind</artifactId>
@@ -208,17 +216,6 @@
             <scope>test</scope>
         </dependency>
 
-        <!--        Work with excel-->
-        <dependency>
-            <groupId>org.apache.poi</groupId>
-            <artifactId>poi</artifactId>
-            <version>${org.apache.poi.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.poi</groupId>
-            <artifactId>poi-ooxml</artifactId>
-            <version>${org.apache.poi.version}</version>
-        </dependency>
     </dependencies>
     <build>
         <plugins>
