@@ -3,15 +3,11 @@ package net.serenitybdd.starter.fetests.testCases.specific;
 import net.serenitybdd.junit.runners.SerenityRunner;
 import net.serenitybdd.starter.annotations.UITest;
 import net.serenitybdd.starter.fetests.testCases.BaseTest;
-import net.serenitybdd.starter.fetests.testSteps.BasePageSteps;
-import net.thucydides.core.annotations.Steps;
 import org.testng.annotations.Test;
 import org.junit.runner.RunWith;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 
 import static net.serenitybdd.starter.fetests.pageObjects.BasePage.*;
-import static net.serenitybdd.starter.model.User.createValidUser;
+import static net.serenitybdd.starter.model.UserFactory.createValidUser;
 import static org.assertj.core.api.Assertions.assertThat;
 
 @RunWith(SerenityRunner.class)

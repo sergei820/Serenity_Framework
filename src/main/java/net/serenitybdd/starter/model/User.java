@@ -10,18 +10,6 @@ public class User {
         this.password = password;
     }
 
-    public static User createValidUser() {
-        return new User("standard_user", "secret_sauce");
-    }
-
-    public static User createUserWithoutUserName() {
-        return new User(null, "secret_sauce");
-    }
-
-    public static User getNullUserObject() {
-        return null;
-    }
-
     public String getUserName() {
         return userName;
     }

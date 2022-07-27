@@ -109,7 +109,7 @@
                     <artifactId>slf4j-log4j12</artifactId>
                 </exclusion>
             </exclusions>
-            <version>1.18.12</version>
+            <version>1.18.24</version>
             <scope>provided</scope>
         </dependency>
 

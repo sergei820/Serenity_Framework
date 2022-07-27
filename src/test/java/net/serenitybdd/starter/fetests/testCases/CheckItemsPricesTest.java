@@ -4,7 +4,7 @@ import net.serenitybdd.starter.annotations.UITest;
 import org.testng.annotations.Test;
 
 import static net.serenitybdd.starter.fetests.pageObjects.BasePage.SAUCE_LABS_BACKPACK;
-import static net.serenitybdd.starter.model.User.createValidUser;
+import static net.serenitybdd.starter.model.UserFactory.createValidUser;
 
 public class CheckItemsPricesTest extends BaseTest {
 
