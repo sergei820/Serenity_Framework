@@ -1,7 +1,7 @@
 package net.serenitybdd.starter.fetests.testCases;
 
 import net.serenitybdd.starter.annotations.UITest;
-import org.testng.annotations.Test;
+import org.junit.Test;
 
 import static net.serenitybdd.starter.fetests.pageObjects.BasePage.SAUCE_LABS_BACKPACK;
 import static net.serenitybdd.starter.model.UserFactory.createValidUser;

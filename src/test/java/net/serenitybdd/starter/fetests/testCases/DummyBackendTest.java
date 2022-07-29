@@ -1,7 +1,6 @@
 package net.serenitybdd.starter.fetests.testCases;
 
-import net.serenitybdd.starter.fetests.testCases.BaseTest;
-import org.testng.annotations.Test;
+import org.junit.Test;
 
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
