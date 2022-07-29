@@ -12,6 +12,7 @@ import net.thucydides.core.annotations.Step;
 @DefaultUrl("https://www.saucedemo.com/")
 public class BasePage extends PageObject {
 
+    public static final String BASE_URL = "https://www.saucedemo.com";
     public static final String SAUCE_LABS_BACKPACK = "Sauce Labs Backpack";
     public static final String SAUCE_LABS_BIKE_LIGHT = "Sauce Labs Bike Light";
     public static final String SAUCE_LABS_BOLT_T_SHIRT = "Sauce Labs Bolt T-Shirt";

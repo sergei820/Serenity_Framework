@@ -8,7 +8,7 @@ import net.serenitybdd.starter.fetests.pageObjects.BasePage;
 import net.serenitybdd.starter.fetests.pageObjects.InventoryPage;
 import net.thucydides.core.annotations.Managed;
 import net.thucydides.core.annotations.Steps;
-import org.testng.annotations.Test;
+import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;

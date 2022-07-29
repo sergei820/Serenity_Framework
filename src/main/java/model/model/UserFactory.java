@@ -1,4 +1,4 @@
-package net.serenitybdd.starter.model;
+package model.model;
 
 public class UserFactory {
 

@@ -4,7 +4,7 @@ import org.junit.Test;
 
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
-public class DummyBackendTest extends BaseTest {
+public class DummyBackendTest {
 
     @Test
     public void imitateBackendTest() {

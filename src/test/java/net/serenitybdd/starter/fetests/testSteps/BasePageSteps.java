@@ -1,67 +1,46 @@
 package net.serenitybdd.starter.fetests.testSteps;
 
+import model.model.User;
+import net.serenitybdd.core.Serenity;
 import net.serenitybdd.core.pages.PageObject;
-import net.serenitybdd.core.pages.WebElementFacade;
-import net.thucydides.core.steps.ScenarioSteps;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import net.serenitybdd.starter.fetests.pageObjects.BasePage;
+import net.thucydides.core.annotations.Step;
 
-import static net.serenitybdd.starter.fetests.pageObjects.BasePage.*;
-import static net.serenitybdd.starter.fetests.pageObjects.BasePage.ITEM_DESCRIPTION_BY_NAME_XPATH;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class BasePageSteps extends PageObject {
 
-    //Methods for price check
-    public void checkItemPrice(String itemName) {
-        assertThat(getPriceFromUI(itemName)).isEqualTo(getPriceByName(itemName));
+    BasePage basePage;
+
+    @Step("Open base page")
+    public void openBasePage() {
+        basePage.open();
     }
 
-    public String getPriceByName(String itemName) {
-        String itemPrice = null;
-        switch(itemName) {
-            case SAUCE_LABS_BACKPACK -> {itemPrice = "$29.99";}
-            case SAUCE_LABS_BIKE_LIGHT -> {itemPrice = "$9.99";}
-            case SAUCE_LABS_BOLT_T_SHIRT, TEST_ALLTHETHINGS_T_SHIRT_RED -> {itemPrice = "$15.99";}
-            case SAUCE_LABS_FLEECE_JACKET -> {itemPrice = "$49.99";}
-            case SAUCE_LABS_ONESIE -> {itemPrice = "$7.99";}
-        }
-        return itemPrice;
+    public void startApp() {
+        //WebDriverManager.chromedriver().setup();
+        //driver = new ChromeDriver();
+
+        //driver = Serenity.getDriver();
+        //driver.get(BASE_URL);
     }
 
-    public String getPriceFromUI(String itemName) {
-        //String locator = compileLocator(ITEM_PRICE_BY_NAME_XPATH, itemName);
-        WebElementFacade backpackDescriptionElement = $(compileLocator(ITEM_PRICE_BY_NAME_XPATH, itemName));
-        //WebElement backpackDescriptionElement = driver.findElement(By.xpath(locator));
-        return backpackDescriptionElement.getText();
+    public void stopApp() {
+        //driver.quit();
     }
 
-    //Methods for materials check
-    public void checkDescriptionOnUI(String itemName) {
-        assertThat(containsCottonInDescriptionOnUI(itemName)).isEqualTo(isMadeFromCotton(itemName));
+    public void logIn(User user) {
+        basePage.getUserNameField().sendKeys(user.getUserName());
+        basePage.getPasswordField().sendKeys(user.getPassword());
+        basePage.getLoginButton().click();
+        //if(!driver.getCurrentUrl().equals("https://www.saucedemo.com")) driver.get("https://www.saucedemo.com");
+        //driver.findElement(By.id("user-name")).sendKeys(user.getUserName());
+        //driver.findElement(By.id("password")).sendKeys(user.getPassword());
+        //driver.findElement(By.id("login-button")).click();
+        //checkSuccessfulLogin();
     }
 
-    public Boolean isMadeFromCotton(String itemName) {
-        Boolean containsCotton = null;
-        switch(itemName) {
-            case SAUCE_LABS_BACKPACK, SAUCE_LABS_BIKE_LIGHT,
-                    SAUCE_LABS_FLEECE_JACKET, SAUCE_LABS_ONESIE -> {containsCotton = false;}
-            case SAUCE_LABS_BOLT_T_SHIRT, TEST_ALLTHETHINGS_T_SHIRT_RED -> {containsCotton = true;}
-        }
-        return containsCotton;
-    }
 
-    public boolean containsCottonInDescriptionOnUI(String itemName) {
-        //String locator = compileLocator(ITEM_DESCRIPTION_BY_NAME_XPATH, itemName);
-        //WebElement backpackDescriptionElement = driver.findElement(By.xpath(locator));
-        WebElementFacade backpackDescriptionElement = $(compileLocator(ITEM_DESCRIPTION_BY_NAME_XPATH, itemName));
-        String itemDescriptionFromUI = backpackDescriptionElement.getText();
-
-        isMadeFromCotton(itemName);
-        itemDescriptionFromUI = itemDescriptionFromUI.toLowerCase();
-        return itemDescriptionFromUI.contains("cotton");
-    }
 
     public String compileLocator(String locator, String replacement) {
         return locator.replace("REPLACE", replacement);
