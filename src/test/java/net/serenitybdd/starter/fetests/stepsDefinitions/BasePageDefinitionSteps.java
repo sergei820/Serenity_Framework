@@ -7,7 +7,6 @@ import net.thucydides.core.annotations.Steps;
 import org.junit.runner.RunWith;
 
 import static model.model.UserFactory.createValidUser;
-import static org.assertj.core.api.Assertions.assertThat;
 
 @RunWith(SerenityRunner.class)
 public class BasePageDefinitionSteps {

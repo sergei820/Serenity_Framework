@@ -2,15 +2,17 @@ package net.serenitybdd.starter.fetests.testSteps;
 
 import net.serenitybdd.core.Serenity;
 import net.serenitybdd.core.pages.WebElementFacade;
+import net.serenitybdd.starter.fetests.pageObjects.InventoryPage;
 import net.thucydides.core.annotations.Step;
 
 import static net.serenitybdd.starter.fetests.pageObjects.BasePage.*;
 import static net.serenitybdd.starter.fetests.pageObjects.BasePage.ITEM_DESCRIPTION_BY_NAME_XPATH;
+import static net.serenitybdd.starter.fetests.pageObjects.InventoryPage.*;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class InventoryPageSteps extends BasePageSteps {
 
-
+    InventoryPage inventoryPage;
 
     @Step("Check that inventory page is opened after successful login")
     public void checkInventoryPageIsOpenedAfterSuccessfulLogin() {
@@ -37,9 +39,7 @@ public class InventoryPageSteps extends BasePageSteps {
     }
 
     public String getPriceFromUI(String itemName) {
-        //String locator = compileLocator(ITEM_PRICE_BY_NAME_XPATH, itemName);
         WebElementFacade backpackDescriptionElement = $(compileLocator(ITEM_PRICE_BY_NAME_XPATH, itemName));
-        //WebElement backpackDescriptionElement = driver.findElement(By.xpath(locator));
         return backpackDescriptionElement.getText();
     }
 
@@ -59,9 +59,8 @@ public class InventoryPageSteps extends BasePageSteps {
     }
 
     public boolean containsCottonInDescriptionOnUI(String itemName) {
-        //String locator = compileLocator(ITEM_DESCRIPTION_BY_NAME_XPATH, itemName);
-        //WebElement backpackDescriptionElement = driver.findElement(By.xpath(locator));
         WebElementFacade backpackDescriptionElement = $(compileLocator(ITEM_DESCRIPTION_BY_NAME_XPATH, itemName));
+        backpackDescriptionElement.waitUntilVisible();
         String itemDescriptionFromUI = backpackDescriptionElement.getText();
 
         isMadeFromCotton(itemName);

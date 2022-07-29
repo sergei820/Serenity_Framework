@@ -1,22 +1,19 @@
-package net.serenitybdd.starter.fetests.testCases.specific;
+package net.serenitybdd.starter.fetests.testCasesDEPRECATED.specific;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import net.serenitybdd.core.pages.PageObject;
-import net.serenitybdd.junit.runners.SerenityRunner;
 import net.serenitybdd.starter.annotations.UITest;
 import net.serenitybdd.starter.fetests.pageObjects.BasePage;
 import net.serenitybdd.starter.fetests.pageObjects.InventoryPage;
 import net.thucydides.core.annotations.Managed;
 import net.thucydides.core.annotations.Steps;
 import org.junit.Test;
-import org.junit.runner.RunWith;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-@RunWith(SerenityRunner.class)
 public class TestToCheckFramework extends PageObject {
 
     public static final String ITEM_NAME = ".inventory_item_name";

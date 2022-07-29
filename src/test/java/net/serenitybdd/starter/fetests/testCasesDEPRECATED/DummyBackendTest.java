@@ -1,4 +1,4 @@
-package net.serenitybdd.starter.fetests.testCases;
+package net.serenitybdd.starter.fetests.testCasesDEPRECATED;
 
 import org.junit.Test;
 

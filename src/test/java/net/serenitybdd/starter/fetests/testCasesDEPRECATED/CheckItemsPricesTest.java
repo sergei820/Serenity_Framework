@@ -1,10 +1,7 @@
-package net.serenitybdd.starter.fetests.testCases;
+package net.serenitybdd.starter.fetests.testCasesDEPRECATED;
 
 import net.serenitybdd.starter.annotations.UITest;
 import org.junit.Test;
-
-import static net.serenitybdd.starter.fetests.pageObjects.BasePage.SAUCE_LABS_BACKPACK;
-import static model.model.UserFactory.createValidUser;
 
 public class CheckItemsPricesTest {
 

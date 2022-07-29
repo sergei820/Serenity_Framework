@@ -3,17 +3,17 @@
 <suite name="TestSuite"> <!--verbose="1"-->
     <test name="CheckItemsPricesTest" >
         <classes>
-            <class name="net.serenitybdd.starter.fetests.testCases.CheckItemsPricesTest" />
+            <class name="net.serenitybdd.starter.fetests.testCasesDEPRECATED.CheckItemsPricesTest" />
         </classes>
     </test>
     <test name="CheckItemsMaterialsTest">
         <classes>
-            <class name="net.serenitybdd.starter.fetests.testCases.CheckItemsMaterialsTest"/>
+            <class name="net.serenitybdd.starter.fetests.testCasesDEPRECATED.CheckItemsMaterialsTest"/>
         </classes>
     </test>
     <test name="DummyBackendTest">
         <classes>
-            <class name="net.serenitybdd.starter.fetests.testCases.DummyBackendTest"/>
+            <class name="net.serenitybdd.starter.fetests.testCasesDEPRECATED.DummyBackendTest"/>
         </classes>
     </test>
 </suite>
