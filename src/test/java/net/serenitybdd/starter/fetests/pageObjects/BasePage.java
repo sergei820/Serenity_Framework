@@ -12,10 +12,6 @@ import net.thucydides.core.annotations.Step;
 @DefaultUrl("https://www.saucedemo.com/")
 public class BasePage extends PageObject {
 
-    public static final String ITEM_PRICE_BY_NAME_XPATH = "//div[text()='REPLACE']/parent::a/parent::div[@class='inventory_item_label']/following-sibling::div[@class='pricebar']/div[@class='inventory_item_price']";
-    public static final String ITEM_DESCRIPTION_BY_NAME_XPATH = "//div[text()='Sauce Labs Bolt T-Shirt']/parent::a/following-sibling::div[@class='inventory_item_desc']";
-
-
     @FindBy(how = How.ID, using = "user-name")
     private WebElementFacade userNameField;
 

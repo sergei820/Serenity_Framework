@@ -5,8 +5,6 @@ import net.serenitybdd.core.pages.WebElementFacade;
 import net.serenitybdd.starter.fetests.pageObjects.InventoryPage;
 import net.thucydides.core.annotations.Step;
 
-import static net.serenitybdd.starter.fetests.pageObjects.BasePage.*;
-import static net.serenitybdd.starter.fetests.pageObjects.BasePage.ITEM_DESCRIPTION_BY_NAME_XPATH;
 import static net.serenitybdd.starter.fetests.pageObjects.InventoryPage.*;
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -23,7 +21,9 @@ public class InventoryPageSteps extends BasePageSteps {
 
     //Methods for price check
     public void checkItemPrice(String itemName) {
-        assertThat(getPriceFromUI(itemName)).isEqualTo(getPriceByName(itemName));
+        String priceFromUi = getPriceFromUI(itemName);
+        String priceFromPriceList = getPriceByName(itemName);
+        assertThat(priceFromUi).isEqualTo(priceFromPriceList);
     }
 
     public String getPriceByName(String itemName) {

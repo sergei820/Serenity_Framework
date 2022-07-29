@@ -18,6 +18,10 @@ import static org.assertj.core.api.Assertions.assertThat;
 })
 public class InventoryPage extends BasePage {
 
+    public static final String ITEM_PRICE_BY_NAME_XPATH = "//div[text()='REPLACE']/parent::a/parent::div[@class='inventory_item_label']/following-sibling::div[@class='pricebar']/div[@class='inventory_item_price']";
+    public static final String ITEM_DESCRIPTION_BY_NAME_XPATH = "//div[text()='REPLACE']/parent::a/following-sibling::div[@class='inventory_item_desc']";
+
+
     public static final String SAUCE_LABS_BACKPACK = "Sauce Labs Backpack";
     public static final String SAUCE_LABS_BIKE_LIGHT = "Sauce Labs Bike Light";
     public static final String SAUCE_LABS_BOLT_T_SHIRT = "Sauce Labs Bolt T-Shirt";
