@@ -8,4 +8,4 @@ Feature: Check items parameters
   Scenario: Check items prices
     Given User logs in to UI
     When User is on the inventory page
-    Then User checks on the UI if SAUCE_LABS_BACKPACK price is equal to price-list
+    Then User checks on the UI if Sauce Labs Backpack price is equal to price-list
