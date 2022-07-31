@@ -4,13 +4,14 @@ import model.model.User;
 import net.serenitybdd.core.pages.PageObject;
 import net.serenitybdd.starter.fetests.pageObjects.BasePage;
 import net.thucydides.core.annotations.Step;
+import utils.WebElementDecorator;
 
 import static utils.WebElementDecorator.clickOnElement;
 import static utils.WebElementDecorator.enterText;
 
 public class BasePageSteps extends PageObject {
 
-    BasePage basePage;
+    BasePage basePage;// = new WebElementDecorator(basePage);
 
     @Step("Open base page")
     public void openBasePage() {
@@ -22,7 +23,7 @@ public class BasePageSteps extends PageObject {
         //enterText(basePage.getUserNameField(), user.getPassword());
         basePage.getUserNameField().sendKeys(user.getUserName());
         basePage.getPasswordField().sendKeys(user.getPassword());
-        clickOnElement(basePage.getLoginButton());
+        basePage.getLoginButton().click();
     }
 
     public String compileLocator(String locator, String replacement) {
