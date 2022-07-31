@@ -12,9 +12,9 @@ public class BasePageDefinitionSteps {
     @Steps
     public BasePageSteps basePageSteps;
 
-    @Given("User logs in to UI")
-    public void userLogsInToUi() {
+    @Given("^(.*) logs in to UI$")
+    public void userLogsInToUi(UserList user) {
         basePageSteps.openBasePage();
-        basePageSteps.logIn(createValidUser());
+        basePageSteps.logIn(createValidUser(user));
     }
 }
