@@ -4,10 +4,6 @@ import model.model.User;
 import net.serenitybdd.core.pages.PageObject;
 import net.serenitybdd.starter.fetests.pageObjects.BasePage;
 import net.thucydides.core.annotations.Step;
-import utils.WebElementDecorator;
-
-import static utils.WebElementDecorator.clickOnElement;
-import static utils.WebElementDecorator.enterText;
 
 public class BasePageSteps extends PageObject {
 

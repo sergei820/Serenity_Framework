@@ -12,7 +12,19 @@ import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 @Slf4j
-public class WebElementDecorator implements WebElement, WebElementFacade {
+public class WebElementDecorator implements WebElementFacade {
+
+
+
+    @Override
+    public void sendKeys(CharSequence... keysToSend) {
+
+    }
+
+    @Override
+    public void click() {
+        click();
+    }
 
     public static void clickOnElement(WebElementFacade element) {
         element.waitUntilVisible();
@@ -460,17 +472,7 @@ public class WebElementDecorator implements WebElement, WebElementFacade {
     }
 
     @Override
-    public void click() {
-
-    }
-
-    @Override
     public void submit() {
-
-    }
-
-    @Override
-    public void sendKeys(CharSequence... keysToSend) {
 
     }
 
