@@ -1,6 +1,11 @@
 package utils;
 
+import static utils.PropertiesLoader.getPropertiesInstance;
+
 public class Properties {
+
+    static final String PROPERTIES_FILE = "/properties.properties";
+    static final java.util.Properties PROPERTIES = getPropertiesInstance();
 
     private String property;
 

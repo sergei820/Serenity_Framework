@@ -1,17 +1,17 @@
 package utils;
 
-import com.google.common.base.Strings;
 import lombok.SneakyThrows;
 
-import java.io.*;
-import java.net.URL;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.nio.charset.Charset;
-import java.nio.file.Paths;
+
+import static utils.Properties.PROPERTIES;
+import static utils.Properties.PROPERTIES_FILE;
 
 public class PropertiesLoader {
-
-    private static final String PROPERTIES_FILE = "/properties.properties";
-    private static final java.util.Properties PROPERTIES = getPropertiesInstance();
 
     InputStream input;
 
@@ -28,7 +28,7 @@ public class PropertiesLoader {
     }
 
     @SneakyThrows
-    private static java.util.Properties getPropertiesInstance() {
+    static java.util.Properties getPropertiesInstance() {
         java.util.Properties instance = new java.util.Properties();
         try (
                 InputStream resourceStream = PropertiesLoader.class.getResourceAsStream(PROPERTIES_FILE);
