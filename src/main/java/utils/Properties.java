@@ -9,7 +9,7 @@ public class Properties {
 
     private String property;
 
-    public String getValue() {
+    public String getProperty() {
         return property;
     }
 }

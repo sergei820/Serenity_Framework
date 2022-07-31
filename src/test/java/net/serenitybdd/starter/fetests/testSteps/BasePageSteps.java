@@ -5,6 +5,9 @@ import net.serenitybdd.core.pages.PageObject;
 import net.serenitybdd.starter.fetests.pageObjects.BasePage;
 import net.thucydides.core.annotations.Step;
 
+import static utils.WebElementDecorator.clickOnElement;
+import static utils.WebElementDecorator.enterText;
+
 public class BasePageSteps extends PageObject {
 
     BasePage basePage;
@@ -15,9 +18,11 @@ public class BasePageSteps extends PageObject {
     }
 
     public void logIn(User user) {
+        //enterText(basePage.getUserNameField(), user.getUserName());
+        //enterText(basePage.getUserNameField(), user.getPassword());
         basePage.getUserNameField().sendKeys(user.getUserName());
         basePage.getPasswordField().sendKeys(user.getPassword());
-        basePage.getLoginButton().click();
+        clickOnElement(basePage.getLoginButton());
     }
 
     public String compileLocator(String locator, String replacement) {
