@@ -1,6 +1,7 @@
 package net.serenitybdd.starter.fetests.stepsDefinitions;
 
 import io.cucumber.java.en.Given;
+import model.model.UserList;
 import net.serenitybdd.starter.fetests.testSteps.BasePageSteps;
 import net.thucydides.core.annotations.Steps;
 

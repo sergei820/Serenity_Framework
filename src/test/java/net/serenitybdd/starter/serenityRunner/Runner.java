@@ -10,5 +10,4 @@ import org.junit.runner.RunWith;
         features = "src/test/resources/featuresStorage/fe",
         glue = "src.test.java.net.serenitybdd.starter.fetests")
 public class Runner {
-    ///fe
 }
