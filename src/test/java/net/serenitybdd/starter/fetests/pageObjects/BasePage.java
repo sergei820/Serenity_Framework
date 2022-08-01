@@ -6,20 +6,18 @@ import net.serenitybdd.core.annotations.findby.How;
 import net.serenitybdd.core.pages.PageObject;
 import net.serenitybdd.core.pages.WebElementFacade;
 import net.thucydides.core.annotations.DefaultUrl;
-import net.thucydides.core.annotations.Step;
-import utils.WebElementDecorator;
-import utils.WebElementFacadeDecoratorInterface;
 
 @Getter
-@DefaultUrl("https://www.saucedemo.com/")
+//@DefaultUrl("")
 public class BasePage extends PageObject {
 
     @FindBy(how = How.ID, using = "user-name")
-    private WebElementFacadeDecoratorInterface userNameField;
+    //private WebElementFacadeDecoratorInterface userNameField;
+    private WebElementFacade userNameField;
 
     @FindBy(how = How.ID, using = "password")
-    private WebElementFacadeDecoratorInterface passwordField;
+    private WebElementFacade passwordField;
 
     @FindBy(how = How.ID, using = "login-button")
-    private WebElementFacadeDecoratorInterface loginButton;
+    private WebElementFacade loginButton;
 }

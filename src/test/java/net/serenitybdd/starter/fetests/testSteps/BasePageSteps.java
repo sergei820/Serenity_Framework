@@ -1,16 +1,19 @@
 package net.serenitybdd.starter.fetests.testSteps;
 
-import model.model.User;
+import lombok.extern.slf4j.Slf4j;
+import model.User;
 import net.serenitybdd.core.pages.PageObject;
 import net.serenitybdd.starter.fetests.pageObjects.BasePage;
 import net.thucydides.core.annotations.Step;
 
+@Slf4j
 public class BasePageSteps extends PageObject {
 
     BasePage basePage;
 
     @Step("Open base page")
     public void openBasePage() {
+        log.info("Opening Login Page");
         basePage.open();
     }
 

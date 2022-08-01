@@ -13,7 +13,7 @@ import static utils.Properties.PROPERTIES_FILE;
 
 public class PropertiesLoader {
 
-    InputStream input;
+    /*InputStream input;
 
     {
         try {
@@ -21,7 +21,7 @@ public class PropertiesLoader {
         } catch (FileNotFoundException e) {
             System.out.println(e.getMessage());
         }
-    }
+    }*/
 
     public static String loadUser(String propertyName) {
         return PROPERTIES.getProperty(propertyName);

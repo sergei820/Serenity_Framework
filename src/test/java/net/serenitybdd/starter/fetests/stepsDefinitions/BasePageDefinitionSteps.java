@@ -1,11 +1,11 @@
 package net.serenitybdd.starter.fetests.stepsDefinitions;
 
 import io.cucumber.java.en.Given;
-import model.model.UserList;
+import model.UserList;
 import net.serenitybdd.starter.fetests.testSteps.BasePageSteps;
 import net.thucydides.core.annotations.Steps;
 
-import static model.model.UserFactory.createValidUser;
+import static model.UserFactory.createValidUser;
 
 public class BasePageDefinitionSteps {
 
