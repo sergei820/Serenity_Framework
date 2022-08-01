@@ -1,6 +1,5 @@
 package model.model;
 
-import utils.Properties;
 import utils.PropertiesLoader;
 
 public class UserFactory {

@@ -7,7 +7,7 @@ import net.thucydides.core.annotations.Step;
 
 public class BasePageSteps extends PageObject {
 
-    BasePage basePage;// = new WebElementDecorator(basePage);
+    BasePage basePage;
 
     @Step("Open base page")
     public void openBasePage() {
