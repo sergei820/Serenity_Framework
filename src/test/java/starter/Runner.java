@@ -1,4 +1,4 @@
-package net.serenitybdd.starter.serenityRunner;
+package starter;
 
 import io.cucumber.junit.CucumberOptions;
 import net.serenitybdd.cucumber.CucumberWithSerenity;
@@ -6,7 +6,7 @@ import org.junit.runner.RunWith;
 
 @RunWith(CucumberWithSerenity.class)
 @CucumberOptions(
-        features = "C:/Mentoring/project/Serenity_Framework/src/test/resources/featuresStorage/fe/",
-        glue = "net.serenitybdd.starter.fetests")
+        features = "src/test/resources/featuresStorage/",
+        glue = "starter")
 public class Runner {
 }

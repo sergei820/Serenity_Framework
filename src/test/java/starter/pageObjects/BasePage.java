@@ -1,4 +1,4 @@
-package net.serenitybdd.starter.fetests.pageObjects;
+package starter.pageObjects;
 
 import net.serenitybdd.core.pages.PageObject;
 

@@ -1,4 +1,4 @@
-package net.serenitybdd.starter.fetests.pageObjects;
+package starter.pageObjects;
 
 import lombok.Getter;
 import net.serenitybdd.core.annotations.findby.FindBy;

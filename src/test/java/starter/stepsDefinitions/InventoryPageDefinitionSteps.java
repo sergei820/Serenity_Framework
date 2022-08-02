@@ -1,9 +1,9 @@
-package net.serenitybdd.starter.fetests.stepsDefinitions;
+package starter.stepsDefinitions;
 
 import core.enums.ItemsEnum;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import net.serenitybdd.starter.fetests.testSteps.InventoryPageSteps;
+import starter.testSteps.InventoryPageSteps;
 import net.thucydides.core.annotations.Steps;
 
 public class InventoryPageDefinitionSteps {

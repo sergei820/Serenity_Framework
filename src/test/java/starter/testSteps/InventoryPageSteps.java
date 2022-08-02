@@ -1,8 +1,8 @@
-package net.serenitybdd.starter.fetests.testSteps;
+package starter.testSteps;
 
 import core.enums.ItemsEnum;
 import net.serenitybdd.core.Serenity;
-import net.serenitybdd.starter.fetests.pageObjects.InventoryPage;
+import starter.pageObjects.InventoryPage;
 import net.thucydides.core.annotations.Step;
 
 import static org.assertj.core.api.Assertions.assertThat;

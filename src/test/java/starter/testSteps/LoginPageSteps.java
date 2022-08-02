@@ -1,9 +1,9 @@
-package net.serenitybdd.starter.fetests.testSteps;
+package starter.testSteps;
 
 import lombok.extern.slf4j.Slf4j;
 import models.User;
 import net.serenitybdd.core.pages.PageObject;
-import net.serenitybdd.starter.fetests.pageObjects.LoginPage;
+import starter.pageObjects.LoginPage;
 import net.thucydides.core.annotations.Step;
 
 @Slf4j

@@ -1,8 +1,8 @@
-package net.serenitybdd.starter.fetests.stepsDefinitions;
+package starter.stepsDefinitions;
 
 import io.cucumber.java.en.Given;
 import models.User;
-import net.serenitybdd.starter.fetests.testSteps.LoginPageSteps;
+import starter.testSteps.LoginPageSteps;
 import net.thucydides.core.annotations.Steps;
 
 import static core.UserFactory.createUser;
