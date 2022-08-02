@@ -1,12 +1,7 @@
 package model;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
+public interface User {
 
-@Getter
-@AllArgsConstructor
-public class User {
-
-    private String userName;
-    private String password;
+    String getUserLogin();
+    String getUserPassword();
 }

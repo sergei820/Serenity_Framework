@@ -8,7 +8,7 @@ import net.thucydides.core.annotations.Step;
 import static net.serenitybdd.starter.fetests.pageObjects.InventoryPage.*;
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class InventoryPageSteps extends BasePageSteps {
+public class InventoryPageSteps extends LoginPageSteps {
 
     InventoryPage inventoryPage;
 

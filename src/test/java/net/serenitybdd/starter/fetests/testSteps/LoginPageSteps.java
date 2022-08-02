@@ -7,7 +7,7 @@ import net.serenitybdd.starter.fetests.pageObjects.LoginPage;
 import net.thucydides.core.annotations.Step;
 
 @Slf4j
-public class BasePageSteps extends PageObject {
+public class LoginPageSteps extends PageObject {
 
     LoginPage loginPage;
 
@@ -18,10 +18,8 @@ public class BasePageSteps extends PageObject {
     }
 
     public void logIn(User user) {
-        //enterText(basePage.getUserNameField(), user.getUserName());
-        //enterText(basePage.getUserNameField(), user.getPassword());
-        loginPage.getUserNameField().sendKeys(user.getUserName());
-        loginPage.getPasswordField().sendKeys(user.getPassword());
+        loginPage.getUserNameField().sendKeys(user.getUserLogin());
+        loginPage.getPasswordField().sendKeys(user.getUserPassword());
         loginPage.getLoginButton().click();
     }
 
