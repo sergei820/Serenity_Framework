@@ -1,7 +1,6 @@
-package model;
+package models;
 
 import lombok.Getter;
-import utils.PropertiesLoader;
 
 public class UserUnknown implements User {
 

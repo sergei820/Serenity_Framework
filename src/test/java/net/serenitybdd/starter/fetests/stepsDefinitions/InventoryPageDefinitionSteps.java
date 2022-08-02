@@ -1,5 +1,6 @@
 package net.serenitybdd.starter.fetests.stepsDefinitions;
 
+import core.enums.ItemsEnum;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import net.serenitybdd.starter.fetests.testSteps.InventoryPageSteps;
@@ -16,12 +17,12 @@ public class InventoryPageDefinitionSteps {
     }
 
     @Then("^User checks on the UI if (.*) contains cotton$")
-    public void userChecksOnTheUiIfItemContainsCotton(String itemName) {
+    public void userChecksOnTheUiIfItemContainsCotton(ItemsEnum itemName) {
         inventoryPageSteps.checkDescriptionOnUI(itemName);
     }
 
     @Then("^User checks on the UI if (.*) price is equal to price-list$")
-    public void userChecksOnTheUiIfItemPriceIsEqualToPricelist(String itemName) {
+    public void userChecksOnTheUiIfItemPriceIsEqualToPricelist(ItemsEnum itemName) {
         inventoryPageSteps.checkItemPrice(itemName);
     }
 }

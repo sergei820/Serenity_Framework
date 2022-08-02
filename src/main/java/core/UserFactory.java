@@ -1,9 +1,13 @@
-package model;
+package core;
 
 import lombok.extern.slf4j.Slf4j;
+import models.User;
+import models.UserUnknown;
+import models.UserValid;
+import models.UserWithWrongPassword;
 
-import static model.UserValid.VALID_USER;
-import static model.UserWithWrongPassword.USER_WITH_WORNG_PASSWORD;
+import static models.UserValid.VALID_USER;
+import static models.UserWithWrongPassword.USER_WITH_WORNG_PASSWORD;
 
 @Slf4j
 public class UserFactory {

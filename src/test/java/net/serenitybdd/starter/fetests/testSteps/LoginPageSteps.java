@@ -1,7 +1,7 @@
 package net.serenitybdd.starter.fetests.testSteps;
 
 import lombok.extern.slf4j.Slf4j;
-import model.User;
+import models.User;
 import net.serenitybdd.core.pages.PageObject;
 import net.serenitybdd.starter.fetests.pageObjects.LoginPage;
 import net.thucydides.core.annotations.Step;
@@ -21,9 +21,5 @@ public class LoginPageSteps extends PageObject {
         loginPage.getUserNameField().sendKeys(user.getUserLogin());
         loginPage.getPasswordField().sendKeys(user.getUserPassword());
         loginPage.getLoginButton().click();
-    }
-
-    public String compileLocator(String locator, String replacement) {
-        return locator.replace("REPLACE", replacement);
     }
 }
