@@ -26,13 +26,13 @@ public class InventoryPageSteps extends LoginPageSteps {
     }
 
     @Step("Check item description on UI")
-    public void checkDescriptionOnUI(ItemsEnum itemName) {
-        assertThat(containsCottonInDescriptionOnUI(itemName)).isEqualTo(itemName.getIsMadeFromCotton());
+    public void checkDescriptionOnUI(ItemsEnum itemName, String material) {
+        assertThat(containsMaterialInDescriptionOnUI(itemName, material)).isEqualTo(itemName.getIsMadeFromCotton());
     }
 
-    public boolean containsCottonInDescriptionOnUI(ItemsEnum itemName) {
+    public boolean containsMaterialInDescriptionOnUI(ItemsEnum itemName, String material) {
         String itemDescriptionFromUI = inventoryPage.getDescriptionFromUI(itemName);
         itemDescriptionFromUI = itemDescriptionFromUI.toLowerCase();
-        return itemDescriptionFromUI.contains("cotton");
+        return itemDescriptionFromUI.contains(material);
     }
 }

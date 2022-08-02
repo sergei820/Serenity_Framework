@@ -16,9 +16,9 @@ public class InventoryPageDefinitionSteps {
         inventoryPageSteps.checkInventoryPageIsOpenedAfterSuccessfulLogin();
     }
 
-    @Then("^User checks on the UI if (.*) contains cotton$")
-    public void userChecksOnTheUiIfItemContainsCotton(ItemsEnum itemName) {
-        inventoryPageSteps.checkDescriptionOnUI(itemName);
+    @Then("^User checks on the UI if (.*) contains (.*)")
+    public void userChecksOnTheUiIfItemContainsMaterial(ItemsEnum itemName, String material) {
+        inventoryPageSteps.checkDescriptionOnUI(itemName, material);
     }
 
     @Then("^User checks on the UI if (.*) price is equal to price-list$")
