@@ -1,11 +1,13 @@
 package starter.stepsDefinitions;
 
+import core.enums.UserType;
 import io.cucumber.java.en.Given;
-import models.User;
-import starter.testSteps.LoginPageSteps;
+import models.user.User;
+import models.userManager.UserManager;
 import net.thucydides.core.annotations.Steps;
+import starter.testSteps.LoginPageSteps;
 
-import static core.UserFactory.createUser;
+import static core.UserManagerFactory.getUserManager;
 
 public class LoginPageDefinitionSteps {
 
@@ -13,9 +15,10 @@ public class LoginPageDefinitionSteps {
     public LoginPageSteps loginPageSteps;
 
     @Given("^(.*) logs in to UI$")
-    public void userLogsInToUi(String userType) {
+    public void userLogsInToUi(UserType userType) {
         loginPageSteps.openBasePage();
-        User user = createUser(userType);
+        UserManager userManager = getUserManager(userType);
+        User user = userManager.createUser();
         loginPageSteps.logIn(user);
     }
 }

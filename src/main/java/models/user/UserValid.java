@@ -1,19 +1,21 @@
-package models;
+package models.user;
 
 import lombok.Getter;
+import models.user.User;
 import utils.PropertiesLoader;
 
 import static org.apache.commons.lang3.SystemUtils.getUserName;
 
-public class UserValid implements User {
+public class UserValid extends User {
 
     public static final String VALID_USER = "validUser";
     @Getter
-    public String userLogin;
+    private String userLogin;
     @Getter
-    public String userPassword;
+    private String userPassword;
 
     public UserValid() {
+        super(PropertiesLoader.loadUser(VALID_USER + "Login"), PropertiesLoader.loadUser(VALID_USER + "Password"));
         this.userLogin = PropertiesLoader.loadUser(VALID_USER + "Login");
         this.userPassword = PropertiesLoader.loadUser(VALID_USER + "Password");
     }

@@ -1,7 +1,7 @@
 package starter.testSteps;
 
 import lombok.extern.slf4j.Slf4j;
-import models.User;
+import models.user.User;
 import net.serenitybdd.core.pages.PageObject;
 import starter.pageObjects.LoginPage;
 import net.thucydides.core.annotations.Step;
