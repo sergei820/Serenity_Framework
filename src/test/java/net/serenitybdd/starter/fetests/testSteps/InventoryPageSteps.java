@@ -67,4 +67,11 @@ public class InventoryPageSteps extends BasePageSteps {
         itemDescriptionFromUI = itemDescriptionFromUI.toLowerCase();
         return itemDescriptionFromUI.contains("cotton");
     }
+
+    @Step("Check if inventory page is loaded")
+    public void checkIfInventoryPageIsLoaded() {
+        assertThat(inventoryPage.getInventoryPageHeader().isVisible())
+                .as("Logging in wasn't successful")
+                .isTrue();
+    }
 }

@@ -10,9 +10,9 @@ public class UserFactory {
     //    return new User("standard_user","standard_user");
     //}
 
-    public static User createValidUser(UserList user) {
+    public static User createValidUser(Users user) {
         log.info("Loading credentials for user to log in");
-        return new User(PropertiesLoader.loadUser(user.getValue() + "Login"), PropertiesLoader.loadUser(user.getValue() + "Password"));
+        return new User(PropertiesLoader.loadUser(user.getUserName() + "Login"), PropertiesLoader.loadUser(user.getUserName() + "Password"));
     }
 
     public static User createUserWithoutUserName() {

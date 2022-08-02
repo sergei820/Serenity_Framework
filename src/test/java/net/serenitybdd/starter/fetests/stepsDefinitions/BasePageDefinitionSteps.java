@@ -1,7 +1,7 @@
 package net.serenitybdd.starter.fetests.stepsDefinitions;
 
 import io.cucumber.java.en.Given;
-import model.UserList;
+import model.Users;
 import net.serenitybdd.starter.fetests.testSteps.BasePageSteps;
 import net.thucydides.core.annotations.Steps;
 
@@ -13,7 +13,7 @@ public class BasePageDefinitionSteps {
     public BasePageSteps basePageSteps;
 
     @Given("^(.*) logs in to UI$")
-    public void userLogsInToUi(UserList user) {
+    public void userLogsInToUi(Users user) {
         basePageSteps.openBasePage();
         basePageSteps.logIn(createValidUser(user));
     }

@@ -1,16 +1,12 @@
 package model;
 
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 
+@Getter
+@AllArgsConstructor
 public class User {
 
-    @Getter
     private String userName;
-    @Getter
     private String password;
-
-    public User(String userName, String password) {
-        this.userName = userName;
-        this.password = password;
-    }
 }
