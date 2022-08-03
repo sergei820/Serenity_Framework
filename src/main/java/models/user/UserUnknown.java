@@ -1,7 +1,6 @@
 package models.user;
 
 import lombok.Getter;
-import models.user.User;
 
 public class UserUnknown extends User {
 

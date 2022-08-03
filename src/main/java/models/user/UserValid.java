@@ -1,10 +1,7 @@
 package models.user;
 
 import lombok.Getter;
-import models.user.User;
 import utils.PropertiesLoader;
-
-import static org.apache.commons.lang3.SystemUtils.getUserName;
 
 public class UserValid extends User {
 
