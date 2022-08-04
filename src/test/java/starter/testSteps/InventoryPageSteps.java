@@ -16,6 +16,11 @@ public class InventoryPageSteps extends BasePageSteps {
         inventoryPage.open();
     }
 
+    @Override
+    public void verifyPage() {
+        assertThat(inventoryPage.getInventoryPageGrid().isVisible()).as("Page wasn't loaded").isTrue();
+    }
+
     @Step("Check that inventory page is opened after successful login")
     public void checkInventoryPageIsOpenedAfterSuccessfulLogin() {
         assertThat(Serenity.getDriver().getCurrentUrl().contains("/inventory.html"))

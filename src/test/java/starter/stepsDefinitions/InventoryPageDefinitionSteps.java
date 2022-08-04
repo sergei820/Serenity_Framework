@@ -27,8 +27,9 @@ public class InventoryPageDefinitionSteps {
         inventoryPageSteps.checkItemPrice(itemName);
     }
 
-    @And("User opens inventory page")
+    @And("User is on the inventory page and page successfully loaded")
     public void userOpensInventoryPage() {
         inventoryPageSteps.openInventoryPage();
+        inventoryPageSteps.pageLoadingVerify();
     }
 }

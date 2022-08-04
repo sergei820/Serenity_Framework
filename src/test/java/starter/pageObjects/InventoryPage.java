@@ -32,10 +32,4 @@ public class InventoryPage extends BasePage {
         backpackDescriptionElement.waitUntilVisible();
         return backpackDescriptionElement.getText();
     }
-
-    @Override
-    public void verifyPage() {
-        inventoryPageGrid.waitUntilVisible();
-        assertThat(inventoryPageGrid.isVisible()).isTrue();
-    }
 }

@@ -14,9 +14,10 @@ public class LoginPageDefinitionSteps {
     @Steps
     public LoginPageSteps loginPageSteps;
 
-    @Given("^User opens login page$")
+    @Given("^User opens login page and page successfully loaded$")
     public void userOpensPage() {
         loginPageSteps.openLoginPage();
+        loginPageSteps.pageLoadingVerify();
     }
 
     @Given("^(.*) logs in to UI$")

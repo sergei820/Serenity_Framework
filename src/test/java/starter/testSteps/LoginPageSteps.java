@@ -5,6 +5,8 @@ import models.user.User;
 import net.thucydides.core.annotations.Step;
 import starter.pageObjects.LoginPage;
 
+import static org.assertj.core.api.Assertions.assertThat;
+
 @Slf4j
 public class LoginPageSteps extends BasePageSteps {
 
@@ -20,5 +22,10 @@ public class LoginPageSteps extends BasePageSteps {
         loginPage.getUserNameField().sendKeys(user.getUserLogin());
         loginPage.getPasswordField().sendKeys(user.getUserPassword());
         loginPage.getLoginButton().click();
+    }
+
+    @Override
+    public void verifyPage() {
+        assertThat(loginPage.getLoginWrapper().isVisible()).as("Page wasn't loaded").isTrue();
     }
 }
