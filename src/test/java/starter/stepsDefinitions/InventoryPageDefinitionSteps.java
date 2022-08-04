@@ -1,6 +1,7 @@
 package starter.stepsDefinitions;
 
 import core.enums.ItemsEnum;
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import starter.testSteps.InventoryPageSteps;
@@ -24,5 +25,10 @@ public class InventoryPageDefinitionSteps {
     @Then("^User checks on the UI if (.*) price is equal to price-list$")
     public void userChecksOnTheUiIfItemPriceIsEqualToPricelist(ItemsEnum itemName) {
         inventoryPageSteps.checkItemPrice(itemName);
+    }
+
+    @And("User opens inventory page")
+    public void userOpensInventoryPage() {
+        inventoryPageSteps.openInventoryPage();
     }
 }

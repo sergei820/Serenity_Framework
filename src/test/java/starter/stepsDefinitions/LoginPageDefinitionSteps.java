@@ -14,9 +14,13 @@ public class LoginPageDefinitionSteps {
     @Steps
     public LoginPageSteps loginPageSteps;
 
+    @Given("^User opens login page$")
+    public void userOpensPage() {
+        loginPageSteps.openLoginPage();
+    }
+
     @Given("^(.*) logs in to UI$")
     public void userLogsInToUi(UserType userType) {
-        loginPageSteps.openBasePage();
         UserManager userManager = getUserManager(userType);
         User user = userManager.createUser();
         loginPageSteps.logIn(user);

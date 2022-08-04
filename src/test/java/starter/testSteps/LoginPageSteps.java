@@ -2,17 +2,16 @@ package starter.testSteps;
 
 import lombok.extern.slf4j.Slf4j;
 import models.user.User;
-import net.serenitybdd.core.pages.PageObject;
-import starter.pageObjects.LoginPage;
 import net.thucydides.core.annotations.Step;
+import starter.pageObjects.LoginPage;
 
 @Slf4j
-public class LoginPageSteps extends PageObject {
+public class LoginPageSteps extends BasePageSteps {
 
     LoginPage loginPage;
 
-    @Step("Open base page")
-    public void openBasePage() {
+    @Step("Open login page")
+    public void openLoginPage() {
         log.info("Opening Login Page");
         loginPage.open();
     }

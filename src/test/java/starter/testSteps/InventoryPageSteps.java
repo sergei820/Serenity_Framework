@@ -7,9 +7,14 @@ import net.thucydides.core.annotations.Step;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class InventoryPageSteps extends LoginPageSteps {
+public class InventoryPageSteps extends BasePageSteps {
 
     InventoryPage inventoryPage;
+
+    @Step
+    public void openInventoryPage() {
+        inventoryPage.open();
+    }
 
     @Step("Check that inventory page is opened after successful login")
     public void checkInventoryPageIsOpenedAfterSuccessfulLogin() {
