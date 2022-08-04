@@ -1,8 +1,10 @@
 package core.enums;
 
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 
 @Getter
+@AllArgsConstructor
 public enum ItemsEnum {
     SAUCE_LABS_BACKPACK("SAUCE_LABS_BACKPACK", "Sauce Labs Backpack", "$29.99", false),
     SAUCE_LABS_BIKE_LIGHT("SAUCE_LABS_BIKE_LIGHT", "Sauce Labs Bike Light", "$9.99", false),
@@ -15,11 +17,4 @@ public enum ItemsEnum {
     private String name;
     private String price;
     private Boolean isMadeFromCotton;
-
-    ItemsEnum(String code, String name, String price, Boolean isMadeFromCotton) {
-        this.code = code;
-        this.name = name;
-        this.price = price;
-        this.isMadeFromCotton = isMadeFromCotton;
-    }
 }

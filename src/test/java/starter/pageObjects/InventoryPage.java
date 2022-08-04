@@ -22,7 +22,7 @@ public class InventoryPage extends BasePage {
     @FindBy(how = How.CSS, using = ".inventory_list")
     private WebElementFacade inventoryPageGrid;
 
-    public String getPriceFromUI(ItemsEnum itemName) {
+    public String getItemPriceFromUI(ItemsEnum itemName) {
         WebElementFacade backpackDescriptionElement = $(compileLocator(ITEM_PRICE_BY_NAME_XPATH, itemName.getName()));
         return backpackDescriptionElement.getText();
     }

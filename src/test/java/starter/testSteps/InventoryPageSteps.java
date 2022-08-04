@@ -30,7 +30,7 @@ public class InventoryPageSteps extends BasePageSteps {
 
     @Step("Check item price")
     public void checkItemPrice(ItemsEnum itemName) {
-        String priceFromUi = inventoryPage.getPriceFromUI(itemName);
+        String priceFromUi = inventoryPage.getItemPriceFromUI(itemName);
         String priceFromPriceList = itemName.getPrice();
         assertThat(priceFromUi).isEqualTo(priceFromPriceList);
     }
