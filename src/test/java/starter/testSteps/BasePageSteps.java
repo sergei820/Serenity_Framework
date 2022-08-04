@@ -1,5 +1,6 @@
 package starter.testSteps;
 
+import net.serenitybdd.core.Serenity;
 import net.serenitybdd.core.pages.PageObject;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -13,15 +14,16 @@ public abstract class BasePageSteps extends PageObject {
     JavascriptExecutor javascriptExecutor;
 
     public final void pageLoadingVerify() {
-        //checkAjax();
+        checkDocumentReadyState();
         verifyPage();
     }
 
-    public void checkAjax() {
-        javascriptExecutor = (JavascriptExecutor) getDriver();
+    public void checkDocumentReadyState() {
+        javascriptExecutor = (JavascriptExecutor) Serenity.getDriver();
         new WebDriverWait(getDriver(), ofSeconds(3))
-                .until(d -> (Boolean) javascriptExecutor
-                        .executeScript("return window.jQuery != undefined && jQuery.active == 0"));
+                .until(d -> javascriptExecutor.executeScript("return document.readyState").equals("complete"));
+//                .until(d -> (Boolean) javascriptExecutor
+//                        .executeScript("return window.jQuery != undefined && jQuery.active == 0"));
     }
 
     public abstract void verifyPage();
