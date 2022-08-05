@@ -1,6 +1,7 @@
-@Smoke
+@smoke
 Feature: Frontend tests
 
+  @testOne
   Scenario: Check items materials
     Given User opens login page and page successfully loaded
     And VALID_USER logs in to UI

@@ -3,12 +3,11 @@ package models.user;
 import lombok.Getter;
 import utils.PropertiesLoader;
 
+@Getter
 public class UserValid extends User {
 
     public static final String VALID_USER = "validUser";
-    @Getter
     private String userLogin;
-    @Getter
     private String userPassword;
 
     public UserValid() {

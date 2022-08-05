@@ -30,9 +30,9 @@ public class InventoryPageSteps extends BasePageSteps {
 
     @Step("Check item price")
     public void checkItemPrice(ItemsEnum itemName) {
-        String priceFromUi = inventoryPage.getItemPriceFromUI(itemName);
-        String priceFromPriceList = itemName.getPrice();
-        assertThat(priceFromUi).isEqualTo(priceFromPriceList);
+        String itemPriceActual = inventoryPage.getItemPrice(itemName);
+        String itemPriceExpected = itemName.getPrice();
+        assertThat(itemPriceActual).isEqualTo(itemPriceExpected);
     }
 
     @Step("Check item description on UI")
@@ -41,8 +41,8 @@ public class InventoryPageSteps extends BasePageSteps {
     }
 
     public boolean containsMaterialInDescriptionOnUI(ItemsEnum itemName, String material) {
-        String itemDescriptionFromUI = inventoryPage.getDescriptionFromUI(itemName);
-        itemDescriptionFromUI = itemDescriptionFromUI.toLowerCase();
-        return itemDescriptionFromUI.contains(material);
+        String itemDescriptionActual = inventoryPage.getItemDescription(itemName);
+        itemDescriptionActual = itemDescriptionActual.toLowerCase();
+        return itemDescriptionActual.contains(material);
     }
 }
