@@ -18,14 +18,14 @@ public class LoginPageSteps extends BasePageSteps {
         loginPage.open();
     }
 
+    @Step("Verify loaded page")
+    public void verifyLoadedLoginPage() {
+        loginPage.verifyPage();
+    }
+
     public void logIn(User user) {
         loginPage.getUserNameField().sendKeys(user.getUserLogin());
         loginPage.getPasswordField().sendKeys(user.getUserPassword());
         loginPage.getLoginButton().click();
-    }
-
-    @Override
-    public void verifyPage() {
-        assertThat(loginPage.getLoginWrapper().isVisible()).as("Page wasn't loaded").isTrue();
     }
 }

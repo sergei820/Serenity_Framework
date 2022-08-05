@@ -23,4 +23,9 @@ public class LoginPage extends BasePage {
 
     @FindBy(how = How.CSS, using = ".login_wrapper-inner")
     private WebElementFacade loginWrapper;
+
+    @Override
+    public void verifyPage() {
+        assertThat(loginWrapper.isVisible()).as("Page wasn't loaded").isTrue();
+    }
 }

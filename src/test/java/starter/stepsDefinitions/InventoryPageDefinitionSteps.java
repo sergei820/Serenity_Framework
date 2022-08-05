@@ -30,6 +30,6 @@ public class InventoryPageDefinitionSteps {
     @And("User is on the inventory page and page successfully loaded")
     public void userOpensInventoryPage() {
         inventoryPageSteps.openInventoryPage();
-        inventoryPageSteps.pageLoadingVerify();
+        inventoryPageSteps.verifyLoadedInventoryPage();
     }
 }
