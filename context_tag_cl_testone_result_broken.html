@@ -148,9 +148,9 @@
     <div id="contenttop">
         <div class="middlebg">
         <span class="breadcrumbs"><a href="index.html">Home</a>
-                > Duration 
+                > Tag 
                 > <span
-                    class="truncate-60">Under 1 Second (tests With Errors)</span>
+                    class="truncate-60">Testone (unsuccessful Tests)</span>
         </span>
         </div>
         <div class="rightbg"></div>
@@ -176,7 +176,7 @@
         <div class="middlb">
             <div class="table">
 
-                <h2><i class='bi bi-tags'></i> Duration: Under 1 Second (tests With Errors)</h2>
+                <h2><i class='bi bi-tags'></i> Tag: Testone (unsuccessful Tests)</h2>
                 <table class='overview'>
                     <tr>
                         <td width="375px" valign="top">
@@ -187,7 +187,7 @@
                                     across 1 scenario
 
                                      |
-                                        <a href="context_under_1_second_result_error.csv" title="Download CSV"> <i class="bi bi-cloud-arrow-down" title="Download CSV"></i></a>
+                                        <a href="context_testone_result_broken.csv" title="Download CSV"> <i class="bi bi-cloud-arrow-down" title="Download CSV"></i></a>
 
                                     <p class="report-info"><i class="bi bi-info-circle"></i> Note that results include
                                         data-driven scenarios containing test ,
@@ -236,43 +236,43 @@
                                                                         <td>
                                                                             <i class="bi bi-flag-fill"></i> Tests Started
                                                                         </td>
-                                                                        <td>Aug 05, 2022 10:41:07</td>
+                                                                        <td>Aug 05, 2022 10:41:03</td>
                                                                     </tr>
                                                                     <tr scope="row">
                                                                         <td>
                                                                             <i class="bi bi-stop-circle"></i> Tests Finished
                                                                         </td>
-                                                                        <td>Aug 05, 2022 10:41:08</td>
+                                                                        <td>Aug 05, 2022 10:41:07</td>
                                                                     </tr>
                                                                     <tr scope="row">
                                                                         <td>
                                                                             <i class="bi bi-stopwatch"></i> Total Duration
                                                                         </td>
-                                                                        <td>287ms</td>
+                                                                        <td>4s</td>
                                                                     </tr>
                                                                     <tr scope="row">
                                                                         <td>
                                                                             <i class="bi bi-trophy"></i> Fastest Test
                                                                         </td>
-                                                                        <td>287ms</td>
+                                                                        <td>4s</td>
                                                                     </tr>
                                                                     <tr scope="row">
                                                                         <td>
                                                                             <i class="bi bi-skip-start"></i> Slowest Test
                                                                         </td>
-                                                                        <td>287ms</td>
+                                                                        <td>4s</td>
                                                                     </tr>
                                                                     <tr scope="row">
                                                                         <td>
                                                                             <i class="bi bi-stopwatch"></i> Average Execution Time
                                                                         </td>
-                                                                        <td>287ms</td>
+                                                                        <td>4s</td>
                                                                     </tr>
                                                                     <tr scope="row">
                                                                         <td>
                                                                             <i class="bi bi-stopwatch-fill"></i> Total Execution Time
                                                                         </td>
-                                                                        <td>287ms</td>
+                                                                        <td>4s</td>
                                                                     </tr>
                                                                     </tbody>
                                                                 </table>
@@ -307,6 +307,11 @@
                                                                 <div class="card">
                                                                     <div class="card-body">
                                                                         <div>
+                                                                                <a href="tag_testone.html">
+                                                                                    <span class="badge" style="background-color:#fe6c2d; margin:1em;padding:4px;">
+                                                                                        <i class="bi bi-tag"></i> Test One&nbsp;&nbsp;&nbsp;1
+                                                                                    </span>
+                                                                                </a>
                                                                                 <a href="tag_smoke.html">
                                                                                     <span class="badge" style="background-color:#fe6c2d; margin:1em;padding:4px;">
                                                                                         <i class="bi bi-tag"></i> Smoke&nbsp;&nbsp;&nbsp;1
@@ -378,6 +383,11 @@
                     <div class="card">
                         <div class="card-body">
                             <div>
+                                    <a href="tag_testone.html">
+                                    <span class="tag-badge badge" style="background-color:#fe6c2d; margin:1em;padding:4px;">
+                                        <i class="bi bi-tag-fill"></i> Test One&nbsp;&nbsp;&nbsp;1
+                                    </span>
+                                    </a>
                                     <a href="tag_smoke.html">
                                     <span class="tag-badge badge" style="background-color:#fe6c2d; margin:1em;padding:4px;">
                                         <i class="bi bi-tag-fill"></i> Smoke&nbsp;&nbsp;&nbsp;1
@@ -425,11 +435,11 @@
                                                             <a href="feature_features_storage_sl_frontend_tests.html">Frontend tests</a>
                                                     </td>
                                                     <td>
-                                                        <a href="frontend_tests_check_items_prices.html">Check items prices</a>
+                                                        <a href="frontend_tests_check_items_materials.html">Check items materials</a>
                                                     </td>
                                                     <td>4</td>
-                                                    <td>10:41:07</td>
-                                                    <td>287ms</td>
+                                                    <td>10:41:03</td>
+                                                    <td>4s 129ms</td>
                                                     <td><a href='##beforetable'><i class='bi bi-exclamation-triangle-fill error-icon ' title='ERROR'></i></a> <span
                                                             style="display:none">ERROR</span></td>
                                                 </tr>
@@ -479,14 +489,14 @@
 
         // Options define for display value on top of bars
         const outcomeDetailsReports = [
-            { title: 'Passing Scenarios', link: "context_duration_cl_under_1_second_result_success.html" },
-            { title: 'Pending Scenarios', link: "context_duration_cl_under_1_second_result_pending.html" },
-            { title: 'Ignored Scenarios', link: "context_duration_cl_under_1_second_result_ignored.html" },
-            { title: 'Skipped Scenarios', link: "context_duration_cl_under_1_second_result_skipped.html" },
-            { title: 'Aborted Scenarios',  link: "context_duration_cl_under_1_second_result_aborted.html"},
-            { title: 'Failed Scenarios', link: "context_duration_cl_under_1_second_result_failure.html"  },
-            { title: 'Broken Scenarios', link: "context_duration_cl_under_1_second_result_error.html"    },
-            { title: 'Compromised Scenarios',  link: "context_duration_cl_under_1_second_result_compromised.html" },
+            { title: 'Passing Scenarios', link: "context_tag_cl_testone_result_success.html" },
+            { title: 'Pending Scenarios', link: "context_tag_cl_testone_result_pending.html" },
+            { title: 'Ignored Scenarios', link: "context_tag_cl_testone_result_ignored.html" },
+            { title: 'Skipped Scenarios', link: "context_tag_cl_testone_result_skipped.html" },
+            { title: 'Aborted Scenarios',  link: "context_tag_cl_testone_result_aborted.html"},
+            { title: 'Failed Scenarios', link: "context_tag_cl_testone_result_failure.html"  },
+            { title: 'Broken Scenarios', link: "context_tag_cl_testone_result_error.html"    },
+            { title: 'Compromised Scenarios',  link: "context_tag_cl_testone_result_compromised.html" },
         ]
         const outcomeData = {
             labels: ['Passing Scenarios', 'Pending Scenarios', 'Ignored Scenarios', 'Skipped Scenarios', 'Aborted Scenarios', 'Failed Scenarios', 'Broken Scenarios', 'Compromised Scenarios','Undefined Scenarios'],
@@ -575,14 +585,14 @@
         // Options define for display value on top of bars
 
         const severityDetailsReports = [
-            { title: 'Passing Scenarios', link: "context_duration_cl_under_1_second_result_success.html" },
-            { title: 'Pending Scenarios', link: "context_duration_cl_under_1_second_result_pending.html" },
-            { title: 'Ignored Scenarios', link: "context_duration_cl_under_1_second_result_ignored.html" },
-            { title: 'Skipped Scenarios', link: "context_duration_cl_under_1_second_result_skipped.html" },
-            { title: 'Aborted Scenarios',  link: "context_duration_cl_under_1_second_result_aborted.html"},
-            { title: 'Failed Scenarios', link: "context_duration_cl_under_1_second_result_failure.html"  },
-            { title: 'Broken Scenarios', link: "context_duration_cl_under_1_second_result_error.html"    },
-            { title: 'Compromised Scenarios',  link: "context_duration_cl_under_1_second_result_compromised.html" },
+            { title: 'Passing Scenarios', link: "context_tag_cl_testone_result_success.html" },
+            { title: 'Pending Scenarios', link: "context_tag_cl_testone_result_pending.html" },
+            { title: 'Ignored Scenarios', link: "context_tag_cl_testone_result_ignored.html" },
+            { title: 'Skipped Scenarios', link: "context_tag_cl_testone_result_skipped.html" },
+            { title: 'Aborted Scenarios',  link: "context_tag_cl_testone_result_aborted.html"},
+            { title: 'Failed Scenarios', link: "context_tag_cl_testone_result_failure.html"  },
+            { title: 'Broken Scenarios', link: "context_tag_cl_testone_result_error.html"    },
+            { title: 'Compromised Scenarios',  link: "context_tag_cl_testone_result_compromised.html" },
         ]
         const severityData = {
             labels: ['Passing', 'Pending', 'Ignored', 'Skipped', 'Aborted', 'Failed', 'Broken', 'Compromised'],
@@ -653,14 +663,14 @@
 
         // Options define for display value on top of bars
         const durationDetailsReports = [
-                {title: "Under 1 second", link: "context_duration_cl_under_1_second_duration_under_1_second.html"},
-                {title: "1 to 10 seconds", link: "context_duration_cl_under_1_second_duration_1_to_10_seconds.html"},
-                {title: "10 to 30 seconds", link: "context_duration_cl_under_1_second_duration_10_to_30_seconds.html"},
-                {title: "30 to 60 seconds", link: "context_duration_cl_under_1_second_duration_30_to_60_seconds.html"},
-                {title: "1 to 2 minutes", link: "context_duration_cl_under_1_second_duration_1_to_2_minutes.html"},
-                {title: "2 to 5 minutes", link: "context_duration_cl_under_1_second_duration_2_to_5_minutes.html"},
-                {title: "5 to 10 minutes", link: "context_duration_cl_under_1_second_duration_5_to_10_minutes.html"},
-                {title: "10 minutes or over", link: "context_duration_cl_under_1_second_duration_10_minutes_or_over.html"},
+                {title: "Under 1 second", link: "context_tag_cl_testone_duration_under_1_second.html"},
+                {title: "1 to 10 seconds", link: "context_tag_cl_testone_duration_1_to_10_seconds.html"},
+                {title: "10 to 30 seconds", link: "context_tag_cl_testone_duration_10_to_30_seconds.html"},
+                {title: "30 to 60 seconds", link: "context_tag_cl_testone_duration_30_to_60_seconds.html"},
+                {title: "1 to 2 minutes", link: "context_tag_cl_testone_duration_1_to_2_minutes.html"},
+                {title: "2 to 5 minutes", link: "context_tag_cl_testone_duration_2_to_5_minutes.html"},
+                {title: "5 to 10 minutes", link: "context_tag_cl_testone_duration_5_to_10_minutes.html"},
+                {title: "10 minutes or over", link: "context_tag_cl_testone_duration_10_minutes_or_over.html"},
         ]
         // The Severity bar chart
         const durationChartCtx = document.getElementById('durationChart');
@@ -672,7 +682,7 @@
             datasets: [{
                 label: 'Number of tests per duration',
                 fill: false,
-                data: ['1','0','0','0','0','0','0','0'],
+                data: ['0','1','0','0','0','0','0','0'],
                 backgroundColor: 'rgba(83, 146, 255,0.5)',
                 borderColor: 'rgba(83, 146, 255, 1)',
             }]
