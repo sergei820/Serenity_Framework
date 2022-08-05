@@ -8,6 +8,7 @@ Feature: Frontend tests
     When User is on the inventory page and page successfully loaded
     Then User checks on the UI if SAUCE_LABS_BOLT_T_SHIRT contains cotton
 
+  @testTwo
   Scenario: Check items prices
     Given User opens login page and page successfully loaded
     And VALID_USER logs in to UI
