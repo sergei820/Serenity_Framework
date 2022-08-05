@@ -64,6 +64,17 @@
             <version>${log4j.version}</version>
         </dependency>
 
+        <!--Integrations Slack
+         https://mvnrepository.com/artifact/com.github.seratch/jslack -->
+        <!-- https://mvnrepository.com/artifact/com.applitools/eyes-selenium-java3 -->
+        <dependency>
+            <groupId>com.applitools</groupId>
+            <artifactId>eyes-selenium-java3</artifactId>
+            <version>5.0.0</version>
+        </dependency>
+
+
+
     </dependencies>
     <build>
         <plugins>
