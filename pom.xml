@@ -64,6 +64,20 @@
             <version>${log4j.version}</version>
         </dependency>
 
+        <!-- To deal with SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder" -->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>1.7.36</version>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-simple</artifactId>
+            <version>1.7.36</version>
+            <scope>test</scope>
+        </dependency>
+
+
         <!--Integrations Slack
          https://mvnrepository.com/artifact/com.github.seratch/jslack -->
         <!-- https://mvnrepository.com/artifact/com.applitools/eyes-selenium-java3 -->
@@ -71,7 +85,13 @@
             <groupId>com.applitools</groupId>
             <artifactId>eyes-selenium-java3</artifactId>
             <version>5.0.0</version>
+        </dependency><!-- https://mvnrepository.com/artifact/com.github.seratch/jslack -->
+        <dependency>
+            <groupId>com.github.seratch</groupId>
+            <artifactId>jslack</artifactId>
+            <version>3.4.2</version>
         </dependency>
+
 
 
 
