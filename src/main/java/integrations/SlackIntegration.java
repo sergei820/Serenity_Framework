@@ -9,7 +9,7 @@ import java.io.IOException;
 
 public class SlackIntegration {
 
-    private final static String WEB_HOOK_URL = "https://hooks.slack.com/services/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";
+    private final static String WEB_HOOK_URL = "https://hooks.slack.com/services/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";
     private final static String O_AUTH_TOKEN = "xoxb-3905122468548-3905202928052-T0FuEciaynxxoBn5LcR2TJxd";
     private final static String SLACK_CHANNEL = "at-mentoring-intermediate";
 
