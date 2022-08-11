@@ -12,7 +12,7 @@ serenity.conf
 ## Running the tests under Maven
 To run tests, perform:
 
-    mvn clean test
+    mvn clean verify
 
 ## Viewing the reports
 
@@ -27,3 +27,14 @@ IMPORTANT!
 Slack Webhook deletes sometimes, in this case create new:
 https://api.slack.com/apps/A03SC3QHSUE/incoming-webhooks?success=1
 and update variable value SlackIntegration.WEB_HOOK_URL
+
+## Report portal
+
+Start the application:
+docker-compose -p reportportal up -d --force-recreate
+
+UI can be opened if container runs:
+http://localhost:8080/ui/#login?redirectPath=%2Fdefault_personal%2Fdashboard
+
+Default User: default\1q2w3e
+Administrator: superadmin\erebus1
