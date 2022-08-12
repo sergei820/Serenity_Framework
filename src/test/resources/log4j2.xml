@@ -1,26 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Configuration status="DEBUG">
+<Configuration status="WARN">
     <Appenders>
-        <Console name="LogToConsole" target="SYSTEM_OUT">
-            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+        <Console name="ConsoleAppender" target="SYSTEM_OUT">
+            <PatternLayout
+                    pattern="[%d{HH:mm:ss}] %-5p (%F) - %m%n"/>
         </Console>
-        <!--<File name="LogToFile" fileName="logs/app.log">
-           <PatternLayout>
-               <Pattern>%d %p %c{1.} [%t] %m%n</Pattern>
-           </PatternLayout>
-       </File>-->
-   </Appenders>
-   <Loggers>
-       <Logger name="com.mkyong" level="info" additivity="false">
-           <!--<AppenderRef ref="LogToFile"/>-->
-            <AppenderRef ref="LogToConsole"/>
-        </Logger>
-        <Logger name="org.springframework.boot" level="info" additivity="false">
-            <AppenderRef ref="LogToConsole"/>
-        </Logger>
-        <Root level="error">
-            <!--<AppenderRef ref="LogToFile"/>-->
-            <AppenderRef ref="LogToConsole"/>
+        <ReportPortalLog4j2Appender name="ReportPortalAppender">
+            <PatternLayout
+                    pattern="[%d{HH:mm:ss}] %-5p (%F) - %m%n"/>
+        </ReportPortalLog4j2Appender>
+    </Appenders>
+    <Loggers>
+        <Root level="DEBUG">
+            <AppenderRef ref="ConsoleAppender"/>
+            <AppenderRef ref="ReportPortalAppender"/>
         </Root>
     </Loggers>
 </Configuration>

@@ -11,8 +11,8 @@ public class UserValid extends User {
     private String userPassword;
 
     public UserValid() {
-        super(PropertiesLoader.loadUser(VALID_USER + "Login"), PropertiesLoader.loadUser(VALID_USER + "Password"));
-        this.userLogin = PropertiesLoader.loadUser(VALID_USER + "Login");
-        this.userPassword = PropertiesLoader.loadUser(VALID_USER + "Password");
+        super(PropertiesLoader.loadProperty(VALID_USER + "Login"), PropertiesLoader.loadProperty(VALID_USER + "Password"));
+        this.userLogin = PropertiesLoader.loadProperty(VALID_USER + "Login");
+        this.userPassword = PropertiesLoader.loadProperty(VALID_USER + "Password");
     }
 }

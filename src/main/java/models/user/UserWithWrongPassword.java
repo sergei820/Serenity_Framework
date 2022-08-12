@@ -12,8 +12,8 @@ public class UserWithWrongPassword extends User {
     private String userPassword;
 
     public UserWithWrongPassword() {
-        super(PropertiesLoader.loadUser(USER_WITH_WORNG_PASSWORD + "Login"), PropertiesLoader.loadUser(USER_WITH_WORNG_PASSWORD + "Password"));
-        this.userLogin = PropertiesLoader.loadUser(USER_WITH_WORNG_PASSWORD + "Login");
-        this.userPassword = PropertiesLoader.loadUser(USER_WITH_WORNG_PASSWORD + "Password");
+        super(PropertiesLoader.loadProperty(USER_WITH_WORNG_PASSWORD + "Login"), PropertiesLoader.loadProperty(USER_WITH_WORNG_PASSWORD + "Password"));
+        this.userLogin = PropertiesLoader.loadProperty(USER_WITH_WORNG_PASSWORD + "Login");
+        this.userPassword = PropertiesLoader.loadProperty(USER_WITH_WORNG_PASSWORD + "Password");
     }
 }

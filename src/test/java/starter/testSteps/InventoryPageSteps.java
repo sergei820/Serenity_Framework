@@ -1,23 +1,30 @@
 package starter.testSteps;
 
 import core.enums.ItemsEnum;
+import lombok.extern.log4j.Log4j;
 import net.serenitybdd.core.Serenity;
-import starter.pageObjects.InventoryPage;
 import net.thucydides.core.annotations.Step;
+import reporting.MyLogger;
+import starter.pageObjects.InventoryPage;
+
 
 import static org.assertj.core.api.Assertions.assertThat;
 
+@Log4j
 public class InventoryPageSteps extends BasePageSteps {
 
     InventoryPage inventoryPage;
 
     @Step
     public void openInventoryPage() {
+        MyLogger.info("Opening inventory page");
+        log.info("Opening inventory page");
         inventoryPage.open();
     }
 
     @Step
     public void verifyLoadedInventoryPage() {
+        log.debug("Verifying inventory page");
         inventoryPage.verifyPage();
     }
 
