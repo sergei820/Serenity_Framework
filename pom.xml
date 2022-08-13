@@ -137,6 +137,13 @@
             <version>5.1.5</version>
         </dependency>
 
+        <!--Integration TestRail-->
+        <dependency>
+            <groupId>com.codepine.api</groupId>
+            <artifactId>testrail-api-java-client</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+
     </dependencies>
     <build>
         <plugins>
