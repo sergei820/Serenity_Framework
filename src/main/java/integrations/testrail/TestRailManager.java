@@ -1,4 +1,7 @@
-package integrations;
+package integrations.testrail;
+
+import integrations.testrail.APIClient;
+import integrations.testrail.APIException;
 
 import java.io.IOException;
 import java.util.HashMap;
@@ -21,8 +24,6 @@ public class TestRailManager {
                                             String error) throws IOException, APIException {
 
         String testRunId = TEST_RUN_ID;
-
-
 
         APIClient client = new APIClient(RAILS_ENGINE_URL);
         client.setUser(TESTRAIL_USERNAME);

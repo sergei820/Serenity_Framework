@@ -1,12 +1,11 @@
 package starter;
 
-import integrations.APIException;
-import integrations.TestRailManager;
+import integrations.testrail.APIException;
+import integrations.testrail.TestRailManager;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
-import net.serenitybdd.core.Serenity;
-import net.serenitybdd.core.SerenityListeners;
-import net.serenitybdd.core.SerenityReports;
+import org.testng.ITestResult;
+import org.testng.annotations.AfterMethod;
 import utils.ContextKeeper;
 
 import java.io.IOException;
@@ -14,6 +13,8 @@ import java.io.IOException;
 import static integrations.SlackIntegration.sendMessageToSlack;
 
 public class ReportSender {
+
+    protected String testCaseId;
 
     @Before
     public static void setPreconditions() {
@@ -34,6 +35,16 @@ public class ReportSender {
             e.printStackTrace();
         } catch (APIException e) {
             e.printStackTrace();
+        }
+    }
+
+    @AfterMethod
+    public void tearDownTestNG(ITestResult result) throws Throwable {
+        if(result.getStatus() == ITestResult.SUCCESS) {
+            TestRailManager.addResultForTestCase(testCaseId, TestRailManager.TEST_CASE_PASSED_STATUS, "");
+        }
+        else if (result.getStatus() == ITestResult.FAILURE) {
+            TestRailManager.addResultForTestCase(testCaseId, TestRailManager.TEST_CASE_FAILED_STATUS, result.getThrowable().getMessage());
         }
     }
 }

@@ -1,4 +1,4 @@
-package integrations;
+package integrations.testrail;
 
 public class APIException extends Exception {
 

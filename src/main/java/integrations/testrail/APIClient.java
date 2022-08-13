@@ -1,4 +1,4 @@
-package integrations;
+package integrations.testrail;
 
 import java.net.URL;
 import java.net.HttpURLConnection;
@@ -14,6 +14,7 @@ import java.io.OutputStreamWriter;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.util.Base64;
+
 import org.json.simple.JSONObject;
 import org.json.simple.JSONValue;
 
