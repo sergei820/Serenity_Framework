@@ -14,14 +14,18 @@ public class CheckPriceTest extends ReportSender {
     @Test
     public void checkPriceTest() throws Throwable {
 
-        testCaseId = "T2";
+        String validElementId = "user-name";
+        String notValidElementId = "user-name_wrong";
+        testCaseId = "2";
 
         WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();
         driver.get("https://www.saucedemo.com/");
-        WebElement userNameField = driver.findElement(By.id("user-name"));
+        WebElement userNameField = driver.findElement(By.id(notValidElementId));
 
         Assert.assertTrue(userNameField.isDisplayed());
+
+        driver.quit();
 
         //TestRailManager.addResultForTestCase(testCaseId, TestRailManager.TEST_CASE_PASSED_STATUS, "");
     }
