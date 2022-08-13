@@ -2,7 +2,7 @@
 Feature: Frontend tests
 
   @testOne
-  Scenario: Check items materials
+  Scenario: Check materials
     Given User sets testCaseId 1
     And User opens login page and page successfully loaded
     And VALID_USER logs in to UI
@@ -10,7 +10,7 @@ Feature: Frontend tests
     Then User checks on the UI if SAUCE_LABS_BOLT_T_SHIRT contains cotton
 
   @testTwo
-  Scenario: Check items prices
+  Scenario: Check prices
     Given User sets testCaseId 2
     And User opens login page and page successfully loaded
     And VALID_USER logs in to UI

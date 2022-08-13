@@ -1,3 +1,5 @@
+package utils;
+
 import lombok.Getter;
 import lombok.Setter;
 
@@ -6,5 +8,5 @@ public enum ContextKeeper {
     INSTANCE;
 
     @Setter
-    private Integer testNumber;
+    private Integer testCaseId;
 }

@@ -13,10 +13,16 @@ public class TestRailManager {
     public static final int TEST_CASE_PASSED_STATUS = 1;
     public static final int TEST_CASE_FAILED_STATUS = 5;
 
+    //APIClient client = new APIClient("https://serenityframework.testrail.io/");
+    //client.setUser(PropertiesLoader.loadProperty("testRailUser"));
+    //client.setPassword(PropertiesLoader.loadProperty("testRailPassword"));
+
     public static void addResultForTestCase(String testCaseId, int status,
                                             String error) throws IOException, APIException {
 
         String testRunId = TEST_RUN_ID;
+
+
 
         APIClient client = new APIClient(RAILS_ENGINE_URL);
         client.setUser(TESTRAIL_USERNAME);
