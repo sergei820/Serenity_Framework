@@ -38,3 +38,9 @@ http://localhost:8080/ui/#login?redirectPath=%2Fdefault_personal%2Fdashboard
 
 Default User: default\1q2w3e
 Administrator: superadmin\erebus1
+
+## Testrail
+
+https://serenityframework.testrail.io/
+se25051990@gmail.com
+asd123_QWE
