@@ -3,7 +3,7 @@
 <suite name="Suite1" verbose="1" >
     <test name="Nopackage" >
         <classes>
-            <class name="starter.testNG.CheckPriceTest" />
+            <class name="starter.testNG.LoginPositiveTest" />
         </classes>
     </test>
 </suite>
