@@ -4,6 +4,7 @@ Project contains:
 Java 17
 Maven
 Serenity BDD framework
+TestNG (for TestRail integration)
 
 #Configuretion:
 serenity.conf
@@ -44,3 +45,6 @@ Administrator: superadmin\erebus1
 https://serenityframework.testrail.io/
 se25051990@gmail.com
 asd123_QWE
+
+Check test run results here:
+https://serenityframework.testrail.io/index.php?/runs/view/1&group_by=cases:section_id&group_order=asc
