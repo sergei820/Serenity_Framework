@@ -37,7 +37,6 @@ docker-compose -p reportportal up -d --force-recreate
 UI can be opened if container runs:
 http://localhost:8080/ui/#login?redirectPath=%2Fdefault_personal%2Fdashboard
 
-Default User: default\1q2w3e
 Administrator: superadmin\erebus1
 
 ## Testrail

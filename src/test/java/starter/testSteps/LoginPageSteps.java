@@ -8,7 +8,6 @@ import starter.pageObjects.LoginPage;
 @Log4j
 public class LoginPageSteps extends BasePageSteps {
 
-
     LoginPage loginPage;
 
     @Step("Open login page")
